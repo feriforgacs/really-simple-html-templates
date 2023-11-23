@@ -1,0 +1,129 @@
+:root {
+	--primary-color: #e81292;
+	--secondarycolor: #9b5de5;
+	--link-color: #00f5d4;
+	--text-color: #171717;
+	--font-size: 16px;
+	--base-padding: 1rem;
+	--cta-background: #000;
+	--cta-text-color: var(--link-color);
+}
+
+@font-face {
+	font-display: swap;
+	font-family: "Unbounded";
+	font-style: normal;
+	font-weight: bold;
+	src: url("../fonts/Unbounded-Bold.ttf") format("truetype");
+}
+
+@font-face {
+	font-display: swap;
+	font-family: "Unbounded";
+	font-style: normal;
+	font-weight: 900;
+	src: url("../fonts/Unbounded-Black.ttf") format("truetype");
+}
+
+@font-face {
+	font-display: swap;
+	font-family: "Unbounded";
+	font-style: normal;
+	font-weight: bold;
+	src: url("../fonts/Unbounded-ExtraBold.ttf") format("truetype");
+}
+
+@font-face {
+	font-display: swap;
+	font-family: "Unbounded";
+	font-style: normal;
+	font-weight: 200;
+	src: url("../fonts/Unbounded-ExtraLight.ttf") format("truetype");
+}
+
+@font-face {
+	font-display: swap;
+	font-family: "Unbounded";
+	font-style: normal;
+	font-weight: 500;
+	src: url("../fonts/Unbounded-Medium.ttf") format("truetype");
+}
+
+@font-face {
+	font-display: swap;
+	font-family: "Unbounded";
+	font-style: normal;
+	font-weight: 300;
+	src: url("../fonts/Unbounded-Light.ttf") format("truetype");
+}
+
+@font-face {
+	font-display: swap;
+	font-family: "Unbounded";
+	font-style: normal;
+	font-weight: normal;
+	src: url("../fonts/Unbounded-Regular.ttf") format("truetype");
+}
+
+@font-face {
+	font-display: swap;
+	font-family: "Unbounded";
+	font-style: normal;
+	font-weight: 600;
+	src: url("../fonts/Unbounded-SemiBold.ttf") format("truetype");
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	background: var(--primary-color);
+	background-size: 2px 100%;
+	color: var(--text-color);
+	font-size: var(--font-size);
+	line-height: 1.2;
+	margin: 0;
+	padding: 0;
+}
+
+header {
+	align-items: flex-start;
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	height: 100svh;
+	justify-content: center;
+	padding: var(--base-padding);
+}
+
+header img {
+	border-radius: 100%;
+	box-shadow: 50px 0 0 0 #000;
+	max-width: 200px;
+}
+
+header h1 {
+	font-family: "Unbounded", sans-serif;
+	font-size: 2rem;
+	font-weight: bold;
+	margin: 2rem 0;
+	padding: 0;
+}
+
+.cta {
+	background-color: var(--cta-background);
+	color: var(--cta-text-color);
+	padding: 1rem;
+	text-decoration: none;
+	text-transform: capitalize;
+}
+
+.section {
+	align-items: flex-start;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	min-height: 100vh;
+	min-height: 100svh;
+}
