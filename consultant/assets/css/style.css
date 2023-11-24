@@ -4,9 +4,12 @@
 	--link-color: #00f5d4;
 	--text-color: #171717;
 	--font-size: 16px;
-	--base-padding: 1rem;
+	--base-padding: 2rem;
 	--cta-background: #000;
 	--cta-text-color: var(--link-color);
+	--background-stripes: repeating-linear-gradient(to right, var(--primary-color) 1rem, var(--primary-color) 110px, rgba(255, 255, 255, 0.25) 110px, rgba(255, 255, 255, 0.25) 111px);
+	--footer-background: #111;
+	--content-max-width: 600px;
 }
 
 @font-face {
@@ -79,7 +82,7 @@ html {
 }
 
 body {
-	background: repeating-linear-gradient(to right, var(--primary-color) 1rem, var(--primary-color) 110px, rgba(255, 255, 255, 0.25) 110px, rgba(255, 255, 255, 0.25) 111px);
+	background: var(--background-stripes);
 	color: var(--text-color);
 	font-size: var(--font-size);
 	line-height: 1.2;
@@ -94,6 +97,8 @@ header {
 	height: 100vh;
 	height: 100svh;
 	justify-content: center;
+	margin: 0 auto;
+	max-width: var(--content-max-width);
 	padding: var(--base-padding);
 	position: sticky;
 	top: 0;
@@ -196,4 +201,92 @@ h2 {
 	margin-right: 2rem;
 	min-width: 60px;
 	padding: 1rem;
+}
+
+.section--testimonials {
+	background: linear-gradient(45deg, #fa8bff, #2bd2ff 52%, #2bff88 90%);
+	background-attachment: fixed;
+}
+
+.section--testimonials h2 {
+	text-align: center;
+}
+
+.testimonial {
+	margin-bottom: 3rem;
+	padding: 0 0 0 2rem;
+	position: relative;
+}
+
+.testimonial blockquote {
+	font-size: 1.5rem;
+	font-style: italic;
+	line-height: 1.6;
+	margin: 1rem 0;
+}
+
+.testimonial p {
+	margin: 0;
+	opacity: 0.5;
+	padding: 0;
+}
+
+.testimonial img {
+	border-radius: 100%;
+	box-shadow: 25px 0 0 0 var(--primary-color);
+	display: block;
+	max-width: 100px;
+}
+
+.section--contact {
+	background: linear-gradient(var(--primary-color) 0%, var(--secondarycolor) 100%);
+	color: #fff;
+	text-align: center;
+}
+
+.section--contact h2 {
+	font-size: 3rem;
+}
+
+.section--contact p {
+	font-size: 1.5rem;
+	line-height: 1.6;
+}
+
+.section--contact .cta {
+	margin: 2rem auto 0;
+}
+
+footer {
+	background: var(--footer-background);
+	color: #333;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 4rem var(--base-padding);
+	position: relative;
+	text-align: center;
+	z-index: 1;
+}
+
+footer .social-icons {
+	display: flex;
+	justify-content: center;
+	margin: 0 auto;
+	margin-bottom: 2rem;
+	max-width: var(--content-max-width);
+}
+
+footer .social-icons a {
+	background: var(--link-color);
+	height: 40px;
+	margin: 0 1rem;
+	padding: 0.5rem;
+	width: 40px;
+}
+
+footer .social-icons a svg {
+	color: #333;
+	height: 100%;
+	width: 100%;
 }
