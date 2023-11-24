@@ -74,12 +74,12 @@
 }
 
 html {
+	background: var(--primary-color);
 	scroll-behavior: smooth;
 }
 
 body {
-	background: var(--primary-color);
-	background-size: 2px 100%;
+	background: repeating-linear-gradient(to right, var(--primary-color) 1rem, var(--primary-color) 110px, rgba(255, 255, 255, 0.25) 110px, rgba(255, 255, 255, 0.25) 111px);
 	color: var(--text-color);
 	font-size: var(--font-size);
 	line-height: 1.2;
@@ -95,6 +95,8 @@ header {
 	height: 100svh;
 	justify-content: center;
 	padding: var(--base-padding);
+	position: sticky;
+	top: 0;
 }
 
 header img {
@@ -103,7 +105,13 @@ header img {
 	max-width: 200px;
 }
 
-header h1 {
+main {
+	position: relative;
+	z-index: 1;
+}
+
+h1,
+h2 {
 	font-family: "Unbounded", sans-serif;
 	font-size: 2rem;
 	font-weight: bold;
@@ -113,10 +121,23 @@ header h1 {
 
 .cta {
 	background-color: var(--cta-background);
+	box-shadow: 5px 5px 0 var(--cta-text-color);
 	color: var(--cta-text-color);
 	padding: 1rem;
 	text-decoration: none;
 	text-transform: capitalize;
+	transition: all 0.2s ease-in-out;
+}
+
+.cta:hover {
+	box-shadow: 0 0 0 var(--cta-text-color);
+	transform: translateX(5px) translateY(5px);
+}
+
+.cta--invert {
+	background-color: var(--cta-text-color);
+	box-shadow: 5px 5px 0 var(--cta-background);
+	color: var(--cta-background);
 }
 
 .section {
@@ -126,4 +147,53 @@ header h1 {
 	justify-content: center;
 	min-height: 100vh;
 	min-height: 100svh;
+	padding: var(--base-padding);
+}
+
+.section--services {
+	background: radial-gradient(circle at 30% 107%, #ff00dc 0, #01ffff 5%, #140fc7 45%, #d6249f 60%, #e81392 90%);
+	background-attachment: fixed;
+}
+
+.section--services h2 {
+	color: #fff;
+}
+
+.section--services p {
+	color: #fff;
+	font-size: 1.25rem;
+	line-height: 1.8;
+	margin: 0 0 1rem 0;
+	padding: 0;
+}
+
+.service-items {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 2rem;
+	justify-content: space-between;
+	margin: 2rem auto;
+}
+
+.service {
+	align-items: center;
+	backdrop-filter: blur(10px);
+	background: rgba(174, 73, 232, 0.28);
+	display: flex;
+	padding: var(--base-padding);
+}
+
+.service h3 {
+	font-family: "Unbounded", sans-serif;
+	font-size: 1.5rem;
+	margin: 0 0 1rem;
+}
+
+.service__icon {
+	align-self: flex-start;
+	background: cyan;
+	height: 60px;
+	margin-right: 2rem;
+	min-width: 60px;
+	padding: 1rem;
 }
